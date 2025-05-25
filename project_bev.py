@@ -1,6 +1,6 @@
 import numpy as np
 
-def project_to_bev(u, v, H, x_origin, y_origin, scale):
+def to_bev(u, v, H, x_origin, y_origin, scale):
     point = np.array([u, v, 1])
     ground_point = np.linalg.inv(H) @ point
     ground_point /= ground_point[2]
